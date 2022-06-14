@@ -96,7 +96,10 @@ function App() {
             placeholder='Input Password'
             onBlur={(e) => inputHandler('password', e.target.value)}
           />
-          <button type='submit' onClick={(e) => submitHandler(e)}>
+          <button
+            disabled={!error ? false : true}
+            type='submit'
+            onClick={(e) => submitHandler(e)}>
             Submit
           </button>
         </form>
